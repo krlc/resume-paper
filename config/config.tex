@@ -1,0 +1,40 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{multicol}
+
+\linespread{1.2}
+
+
+\pagenumbering{gobble}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+\geometry{a4paper, textwidth=5.7in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[
+%  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+%  BoldFont=LinLibertine_RB.otf,
+%  ItalicFont=LinLibertine_RI.otf,
+%  BoldItalicFont=LinLibertine_RBI.otf
+%]{LinLibertine_R.otf}
+%\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% PDF SETUP
+\usepackage[bookmarks, colorlinks, breaklinks, pdftitle={Resume of Kirills Loveneckis}, pdfauthor={Kirills Loveneckis}]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} %MidnightBlue
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large} %\sectionrule{3ex}{0pt}{-1ex}{0.5pt}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+% CUSTOM COMMANDS
+\input{config/customCommands.tex}

@@ -1,0 +1,31 @@
+\newcommand{\indentMajor}{\par\vspace{0.8cm}}
+\newcommand{\indentInblock}{\par\vspace{0.1cm}}
+\newcommand{\indentBlock}{\par\vspace{0.2cm}}
+
+% ONE LINERS
+
+\newcommand{\education}[3]{\years{#1}\textbf{#2}, #3}
+\newcommand{\educationU}[4]{\years{#1}\textbf{#2}, #3, #4}
+\newcommand{\work}[4]{\years{#1}\textbf{#2}, \textit{#3}\indentInblock#4.}
+\newcommand{\activity}[3]{\years{#1}\textbf{#2}, #3}
+\newcommand{\activityC}[3]{\years{#1}\textbf{#2} #3} % Without comma
+\newcommand{\activityBy}[2]{\textbf{#1}, organized by \textit{#2}} % A detailed version; \indentInblock #3.
+\newcommand{\exam}[4]{#1 (#2): \hfill #3/#4}
+
+\usepackage{marginnote}
+\newcommand{\years}[1]{\reversemarginpar\marginnote{\scriptsize\mbox{#1}}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{0pt}
+
+
+% YIELDS
+
+% Dotted List
+\makeatletter
+\newcommand{\dottedList}[1]{#1\dottedListSub}
+\newcommand{\dottedListSub}[1]{ • #1\@ifnextchar\bgroup{\dottedListSub}{}}
+
+% Languages
+\makeatletter
+\newcommand{\langs}[2]{\begin{multicols}{2}\textbf{#1} \textit{#2}\langsSub}
+\newcommand{\langsSub}[2]{\par\textbf{#1} \textit{#2}\@ifnextchar\bgroup{\langsSub}{\end{multicols}}}
